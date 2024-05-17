@@ -1,3 +1,4 @@
+<?php
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -10,7 +11,7 @@ class CreateEtudiantHasCoursTable extends Migration
             $table->string('id_cour', 25);
             $table->unsignedBigInteger('id_user');
             $table->boolean('validate');
-            
+
             $table->primary(['id_cour', 'id_user']);
 
             $table->foreign('id_cour')->references('id_cour')->on('cours');
