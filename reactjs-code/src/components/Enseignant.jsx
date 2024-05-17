@@ -1,21 +1,24 @@
-import{ Component } from "react";
+import { Component } from "react";
 
-class Enseignat extends Component {
+class Enseignant extends Component {
   render() {
+    const { index, Enseignant } = this.props;
+    const { matricule, nom, prenom, email } = Enseignant;
+
     return (
       <tr>
-        <td>1</td>
-        <td>143745</td>
-        <td>Errebache</td>
-        <td>Ahmed </td>
-        <td>ahmed@gmail.com</td>
+        <td>{index}</td>
+        <td>{matricule}</td>
+        <td>{nom}</td>
+        <td>{prenom}</td>
+        <td>{email}</td>
         <td>
-          <button className="ui mini orange button">update</button>
-          <button className="ui mini red button">delete</button>
+          <button className="ui mini orange button">Update</button>
+          <button className="ui mini red button">Delete</button>
         </td>
       </tr>
     );
   }
 }
 
-export default Enseignat;
+export default Enseignant;

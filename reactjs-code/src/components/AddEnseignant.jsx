@@ -1,6 +1,6 @@
 import  { Component } from "react";
 
-class AddFormateur extends Component {
+class AddEnseignant extends Component {
   render() {
     return (
       <form className="ui form">
@@ -29,4 +29,4 @@ class AddFormateur extends Component {
   }
 }
 
-export default AddFormateur;
+export default AddEnseignant;
