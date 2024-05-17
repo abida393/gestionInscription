@@ -1,6 +1,6 @@
 import{ Component } from "react";
 
-class Formateur extends Component {
+class Enseignat extends Component {
   render() {
     return (
       <tr>
@@ -18,4 +18,4 @@ class Formateur extends Component {
   }
 }
 
-export default Formateur;
+export default Enseignat;

@@ -1,12 +1,22 @@
 import { Component } from "react";
-import AddFormateur from "./AddFormateur";
+import AddEnseignat from "./AddEnseignat";
+import axios from "axios";
 import './App.css'
-import FormateurListe from "./FormateurListe";
+import EnseignatListe from "./EnseignatListe";
 import AddCatalogue from "./AddCatalogue";
 import CatalogueListe from "./CatalogueListe";
 import AddCour from "./AddCour";
 import CourListe from "./CourListe";
 class App extends Component {
+  state={
+    Enseignats:[],
+    url:'http://127.0.0.1:8000/api/Enseignant' ,
+
+  };
+  getEnseignats = async () => {
+    const Enseignats = await axios.get(this.state.url);
+    this.setState({Enseignats : Enseignats.data});
+  }
   render() {
     return (
       <div>
@@ -20,8 +30,8 @@ class App extends Component {
 
         <div className="ui main container">
          
-          <AddFormateur/>
-          <FormateurListe/>
+          <AddEnseignat/>
+          <EnseignatListe/>
           <hr/>
           <hr/>
           <hr/>

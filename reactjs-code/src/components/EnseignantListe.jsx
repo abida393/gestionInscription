@@ -1,6 +1,6 @@
 import  { Component } from "react";
-import Formateur from "./Formateur";
-class FormateurListe extends Component {
+import Enseignat from "./Enseignant";
+class EnseignatListe extends Component {
  
 
   render() {
@@ -19,7 +19,7 @@ class FormateurListe extends Component {
           </thead>
 
           <tbody>
-           <Formateur />
+           <Enseignat />
           </tbody>
         </table>
       </div>
@@ -27,4 +27,4 @@ class FormateurListe extends Component {
   }
 }
 
-export default FormateurListe;
+export default EnseignatListe;
